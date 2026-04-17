@@ -20,8 +20,8 @@ public class Pauta {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "turma")
-    private String turma;
+    @Column(name = "pauta")
+    private String pauta;
 
     @OneToMany
     @JoinColumn(name = "id_pauta")
@@ -30,9 +30,9 @@ public class Pauta {
     public Pauta() {
     }
 
-    public Pauta(Integer id, String turma, List<Usuario> usuario) {
+    public Pauta(Integer id, String pauta, List<Usuario> usuario) {
         this.id = id;
-        this.turma = turma;
+        this.pauta = pauta;
         this.usuario = usuario;
     }
 
@@ -44,12 +44,12 @@ public class Pauta {
         this.id = id;
     }
 
-    public String getTurma() {
-        return turma;
+    public String getPauta() {
+        return pauta;
     }
 
-    public void setTurma(String turma) {
-        this.turma = turma;
+    public void setPauta(String pauta) {
+        this.pauta = pauta;
     }
 
     public List<Usuario> getUsuario() {
